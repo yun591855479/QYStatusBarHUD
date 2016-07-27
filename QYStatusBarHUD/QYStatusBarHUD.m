@@ -5,6 +5,7 @@
 //  Created by 胡文宽 on 16/7/26.
 //  Copyright © 2016年 qingyun. All rights reserved.
 //
+//  使用提示：由于本指示器是一个窗口，在没有设置其rootViewController时，不要在viewDidLoad方法里直接调用本框架的方法。可以选择在一个button的点击事件或者点击屏幕的事件中调用本框架的方法。
 
 #import "QYStatusBarHUD.h"
 #define XMGMessageFont [UIFont systemFontOfSize:12]
@@ -31,6 +32,7 @@ static NSTimer *timer_;
     //    frame数据
     CGFloat windowH = 20;
     CGRect frame = CGRectMake(0, -windowH, [UIScreen mainScreen].bounds.size.width, windowH);
+    
     
     //    显示数据
     //    为避免频繁创建窗口的窗口残留，先隐藏之前的窗口
